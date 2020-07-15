@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="com.example.scaletimebardemo.MainBinding"></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.pp.scalebar.ScalableScaleBar
+            android:id="@+id/main_timebar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@id/main_videotimebar_normal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:showCursorLine="false" />
+
+        <com.pp.scalebar.VideoTimeBar
+            android:id="@+id/main_videotimebar_normal"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            app:cursorBackgroudColor="@android:color/holo_red_dark"
+            app:layout_constraintBottom_toTopOf="@id/main_videotimebar2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_timebar"
+            app:showCursorLine="false" />
+
+
+        <com.pp.scalebar.VideoTimeBar
+            android:id="@+id/main_videotimebar2"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/black"
+            app:colorScaleBackgroud="@android:color/black"
+            app:cursorBackgroudColor="@android:color/holo_orange_dark"
+            app:cursorLineColor="@android:color/holo_orange_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_videotimebar_normal"
+            app:tickColor="@android:color/white"
+            app:tickValueColor="@android:color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
