@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         // 设置刻度尺范围
         mBinding.mainTimebar.setRange(startTime, endTime);
 
-        final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm");
+        final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
         // 设置刻度值描述策略
         mBinding.mainTimebar.setTickMarkStrategy(new ScalableScaleBar.TickMarkStrategy() {
             @Override
